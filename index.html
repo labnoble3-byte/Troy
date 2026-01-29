@@ -1,34 +1,130 @@
-<html>
-  <head>
-    <title>login</title>
-  </head>
-  <body>
-    
-    <form onsubmit="return login()">
-      <input id="u" placeholder ="Username" required>
-      <input id="p" type="password" placeholder="Password" required>
-      <button>Login</button>
-    </form>
-
-    <script>
-      function login (){
-        if (u.value=="admin" && p.value=="123"){
-          alert("login berhasil");
-        } else {
-          alert ("login gagal");
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage Sederhana</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-        return false;
-      }
-    </script>
-    
-    </body>
-    </html>
 
-    
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+        }
 
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-        
-    
-  </body>
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background-color: #3498db;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h2>MyWebsite</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Selamat Datang</h1>
+    <p>Ini adalah homepage website sederhana</p>
+</section>
+
+<section class="content">
+    <h2 style="margin-bottom: 20px;">Layanan Kami</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Desain Web</h3>
+            <p>Kami membuat desain website yang modern dan responsif.</p>
+        </div>
+        <div class="card">
+            <h3>Pengembangan</h3>
+            <p>Website cepat, aman, dan mudah digunakan.</p>
+        </div>
+        <div class="card">
+            <h3>Support</h3>
+            <p>Dukungan teknis kapan saja Anda butuhkan.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 MyWebsite. All rights reserved.</p>
+</footer>
+
+</body>
 </html>
